@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Week 2: Principles of Effective Data Visualization</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christian Möllmann" />
+    <script src="libs/header-attrs-2.27/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Week 2: Principles of Effective Data Visualization
+]
+.author[
+### Christian Möllmann
+]
+
+---
+
+
+## Why Visualize Data?
+
+- **Visualization** is a powerful tool to uncover insights from data and communicate those insights to others.
+
+- In marine ecology, clear visualizations can:
+  - Reveal patterns in species distribution.
+  - Highlight environmental changes over time.
+  - Communicate complex data to non-experts effectively.
+
+---
+
+# Core Concepts
+
+## Understanding Your Audience
+
+- **Who will be viewing your visualizations?**
+  - Scientists: Require detailed, accurate visualizations.
+  - Policymakers: Need clear, actionable insights.
+  - The Public: Prefer simple, engaging visuals.
+
+- **Tailoring Visualizations**:
+  - Adjust complexity and detail based on your audience.
+  - Use appropriate language and annotations.
+
+---
+
+# Visual Perception
+
+- **How humans perceive visual information**:
+  - Our brains are wired to recognize patterns, shapes, and colors.
+  - We tend to group elements based on proximity, similarity, and continuity.
+  
+- **Gestalt Principles**:
+  - **Proximity**: Objects close to each other are perceived as a group.
+  - **Similarity**: Similar objects are perceived as part of the same group.
+  - **Continuity**: The eye is drawn along continuous lines and curves.
+
+---
+
+# Design Principles
+
+- **Clarity**:
+  - Keep visuals clean and uncluttered.
+  - Use whitespace effectively.
+  - Ensure labels and annotations are clear and readable.
+
+- **Accuracy**:
+  - Visual representations must be true to the data.
+  - Avoid misleading scales or distorted graphs.
+
+- **Efficiency**:
+  - Convey your message with minimal visual complexity.
+  - Focus on the most important data, avoiding distractions.
+
+---
+
+# The Grammar of Graphics
+
+- **Concept behind `ggplot2`**:
+  - Developed by Hadley Wickham, `ggplot2` is based on the Grammar of Graphics framework.
+  - This framework allows you to build complex plots from a consistent set of principles.
+
+- **Components**:
+  - **Data**: The dataset you’re working with.
+  - **Aesthetics**: How data is mapped to visual properties like position, color, size.
+  - **Geometries**: The type of plot, such as points, lines, bars.
+  - **Statistics**: Summarizing data within the plot, like calculating means or medians.
+  - **Scales**: Control how data values map to aesthetics, like axis ranges and color gradients.
+
+---
+
+# Practical Application
+
+## Simple Example in `ggplot2`
+
+```r
+# Load necessary library
+library(ggplot2)
+
+# Simulated data example
+set.seed(123)
+df &lt;- data.frame(
+  variable1 = rnorm(100),
+  variable2 = rnorm(100)
+)
+
+# Basic scatter plot
+ggplot(data = df, aes(x = variable1, y = variable2)) +
+  geom_point(color = 'blue', size = 2) +
+  labs(
+    title = "Scatter Plot of Variable 1 vs. Variable 2",
+    x = "Variable 1",
+    y = "Variable 2"
+  ) +
+  theme_minimal()```
+
+---
+
+# Key Takeaways
+- **Components**:Effective visualizations are clear, accurate, and audience-appropriate.
+- **Components**:Understanding visual perception and design principles is crucial for creating impactful graphics.
+
+## Exercise Overview
+Today, we'll be working on creating basic plots using ggplot2, focusing on applying the design principles we just discussed.
+
+---
+ 
+# Thank You!
+
+# Questions?
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current% / %total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
