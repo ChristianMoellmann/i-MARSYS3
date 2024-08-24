@@ -1,4 +1,4 @@
-# Data Analysis and Modelling 1 (i-MARSYS 3)
+# Data Handling and Visualization (i-MARSYS 3)
 
 ## Course Overview
 Data visualization is an essential skill for interpreting and communicating complex datasets in marine ecology and fisheries science. This 13-week course provides Master’s students with a comprehensive introduction to the principles and practices of data visualization, tailored specifically to the unique challenges of ecological and fisheries data. The course covers both theoretical foundations and practical applications, ensuring that students develop the skills needed to create clear, accurate, and impactful visualizations.
