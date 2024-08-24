@@ -1,0 +1,12 @@
+# Site settings
+title: "Meine Website"
+description: "Eine einfache Jekyll-Website"
+url: "https://<ChristianMoellmann>.github.io" # Ersetze <username> durch deinen GitHub-Benutzernamen
+
+# Author settings
+author:
+  name: "Mölli"
+  email: "christian.moellmann@uni-hamburg.de"
+
+# Theme settings
+theme: jekyll-theme-cayman # Du kannst hier ein anderes Jekyll-Theme wie "jekyll-theme-minimal" oder "jekyll-theme-hacker" festlegen
