@@ -20,7 +20,7 @@ Data visualization is an essential skill for interpreting and communicating comp
   - https://ggplot2-book.org
   - https://bookdown.org/ansellbr/WEHI_tidyR_course_book/
   - https://rkabacoff.github.io/datavis/
- - https://r4ds.had.co.nz/index.html
+  - https://r4ds.had.co.nz/index.html
 
 ### Course Materials
 - [Lecture Slides: Introduction to Data Visualization](presentations/week1.html)
