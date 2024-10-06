@@ -56,7 +56,7 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Exercise:**
   - Data exploration using `summary()`, `str()`, and basic EDA techniques.
 - **Reading:**
-  - Tukey, J.W. (1977). *Exploratory Data Analysis*. Selected sections.
+  - [*Exploratory Data Analysis*](https://bookdown.org/rdpeng/exdata/)
  
 ### Course Materials
 - [Lecture Slides: Exploratory Data Analysis (EDA) - Part 1](presentations/week3.html)
