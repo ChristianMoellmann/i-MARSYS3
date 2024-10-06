@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Week 1: Introduction to Data Visualization</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christian Möllmann" />
+    <script src="libs/header-attrs-2.27/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Week 1: Introduction to Data Visualization
+]
+.author[
+### Christian Möllmann
+]
+
+---
+
+
+# Why is Data Visualization Important?
+
+- **Understanding Complex Data**
+  - Data in marine ecology and fisheries science is often complex and multidimensional.
+  - Visualization helps simplify and make sense of this data.
+  
+- **Communicating Insights**
+  - Effective visualizations communicate key insights clearly and quickly.
+  - They can influence decisions, policies, and public understanding.
+
+---
+
+# Course Structure and Objectives
+
+- **Course Duration**: 13 Weeks
+
+- **Class Time**: 2 Hours per Week
+
+---
+
+# What You Will Learn
+
+- **Principles of Data Visualization**
+  - How to create clear, accurate, and impactful visualizations.
+  
+- **Exploratory Data Analysis (EDA)**
+  - Using visualization for data exploration and hypothesis generation.
+  
+- **Practical Skills in R**
+  - Using `ggplot2` to create various types of plots.
+  
+- **Theoretical Foundations**
+  - Understanding the theories behind effective data visualization.
+
+---
+
+# Introduction to R and RStudio
+
+## What is R?
+
+- **R** is a powerful language and environment for statistical computing and graphics.
+
+- It’s widely used in data analysis, statistical modeling, and data visualization.
+
+- Open-source and highly extensible.
+
+---
+
+# Why Use R in This Course?
+
+- **Flexibility and Power**
+  - R provides powerful tools for data manipulation, analysis, and visualization.
+  
+- **Reproducibility**
+  - R scripts can be shared and reused, ensuring reproducibility of analyses.
+  
+- **Community Support**
+  - Extensive libraries and community support, including packages like `ggplot2` for visualization.
+
+---
+
+# What is RStudio?
+
+- **RStudio** is an integrated development environment (IDE) for R.
+- It makes working with R easier by providing tools for writing scripts, visualizing data, and managing projects.
+
+- **Key Features**
+  - Script editor with syntax highlighting.
+  - Integrated console for running R commands.
+  - Visualization pane for viewing plots.
+
+---
+
+# Hands-On: Getting Started with R and RStudio
+
+## Installing R and RStudio
+
+- **Step 1**: Download R from [CRAN](https://cran.r-project.org/).
+
+- **Step 2**: Download RStudio from [RStudio](https://www.rstudio.com/products/rstudio/download/).
+
+---
+
+# Exploring RStudio
+
+- **Console**: Where you can type and execute R commands.
+
+- **Script Editor**: Write and save your R scripts here.
+
+- **Environment Pane**: View your data objects, functions, and variables.
+
+- **Plots Pane**: View and export your visualizations.
+
+---
+
+# Writing Your First R Script
+
+```r
+# Create a simple vector
+data_vector &lt;- c(1, 2, 3, 4, 5)
+
+# Calculate the mean
+mean(data_vector)
+```
+## Explanation
+- data_vector &lt;- c(1, 2, 3, 4, 5): Creates a vector of numbers.
+- mean(data_vector): Calculates the average of the numbers.
+
+---
+
+## Data Types in R
+
+### Common Data Types in R
+
+```r
+# Numeric: Represents numbers.
+  - Example: `x &lt;- 42`, `y &lt;- 3.14`
+  
+# Integer: Whole numbers.
+  - Example: `z &lt;- as.integer(10)`
+  
+# Character: Text strings.
+  - Example: `name &lt;- "John"`
+
+# Logical: Boolean values (TRUE or FALSE).
+  - Example: `flag &lt;- TRUE`
+```
+
+---
+
+## Data Structures in R
+
+```r
+# Vectors: A collection of elements of the same type.
+  - Example: `c(1, 2, 3, 4)`
+  
+# Matrices: 2-dimensional array of elements of the same type.
+  - Example: `matrix(1:6, nrow = 2, ncol = 3)`
+  
+# Data Frames: Tabular data structure with rows and columns.
+  - Example: `data.frame(Name = c("Alice", "Bob"), Age = c(25, 30))`
+  
+# Lists: A collection of elements of different types.
+  - Example: `list(name = "John", age = 30, scores = c(85, 90, 95))`
+```
+
+---
+
+## Importing Datasets in R
+
+### Importing CSV Files
+
+- **read.csv()**: Use this function to import CSV files.
+  
+  ```r
+  # Importing a CSV file
+  data &lt;- read.csv("data/mydata.csv")
+  head(data)
+  ```
+- **file**: The path to the CSV file.
+- **header**: Specifies if the first row contains column names (default is TRUE).
+- **sep**: Specifies the delimiter (default is comma).
+
+---
+
+# Course Resources and Expectations
+
+## Online Resources
+- https://ggplot2-book.org
+- https://bookdown.org/ansellbr/WEHI_tidyR_course_book/
+- https://rkabacoff.github.io/datavis/
+- https://r4ds.had.co.nz/index.html
+
+- RStudio Cheat Sheets
+
+---
+
+# Expectations
+### Active Participation
+ Engage in discussions and exercises.
+
+### Weekly Assignments
+- Complete exercises using R and ggplot2.
+
+### Final Project
+- Develop a comprehensive data visualization project based on a dataset relevant to marine ecology or fisheries science.
+
+---
+
+# Thank You!
+
+### Questions?
+Let's get started on your journey into data visualization!
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current% / %total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
