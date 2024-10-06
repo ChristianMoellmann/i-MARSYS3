@@ -17,7 +17,10 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Exercise:**
   - Basic R syntax, data types, and importing datasets.
 - **Reading:**
-  - Cleveland, W.S. (1985). *The Elements of Graphing Data*. Chapters 1-2.
+  - https://ggplot2-book.org
+  - https://bookdown.org/ansellbr/WEHI_tidyR_course_book/
+  - https://rkabacoff.github.io/datavis/
+ - https://r4ds.had.co.nz/index.html
 
 ### Course Materials
 - [Lecture Slides: Introduction to Data Visualization](presentations/week1.html)
