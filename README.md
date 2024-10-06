@@ -39,7 +39,7 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Exercise:**
   - Creating simple plots (scatter plots, bar charts) using `ggplot2`.
 - **Reading:**
-  - Tufte, E.R. (1983). *The Visual Display of Quantitative Information*. Chapters 1-3.
+  - [Exercise PDF](pdfs/exercise_week1.pdf)
 
 ### Course Materials
 - [Lecture Slides: Principles of Effective Data Visualization](presentations/week2.html)
