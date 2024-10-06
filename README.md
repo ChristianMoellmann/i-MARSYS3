@@ -54,7 +54,7 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Descriptive statistics and summary functions in R.
   - Data cleaning and preparation.
 - **Exercise:**
-  - Data exploration using `summary()`, `str()`, and basic EDA techniques.
+  - Data exploration using basic EDA techniques.
 - **Reading:**
   - [*Exploratory Data Analysis*](https://bookdown.org/rdpeng/exdata/)
  
