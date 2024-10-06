@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Week 4: Exploratory Data Analysis (EDA) - Part 2</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christian Möllmann" />
+    <script src="libs/header-attrs-2.27/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Week 4: Exploratory Data Analysis (EDA) - Part 2
+]
+.author[
+### Christian Möllmann
+]
+
+---
+
+
+## Understanding Distributions
+
+- **What is a Distribution?**
+  - A distribution describes how values in a dataset are spread across a range.
+  - Key aspects include central tendency, spread, and shape.
+
+- **Why Visualize Distributions?**
+  - Helps identify patterns, skewness, and outliers.
+  - Provides insights into the underlying structure of the data.
+
+---
+
+## Histograms
+
+### What is a Histogram?
+
+- **Definition**
+  - A histogram is a graphical representation of the distribution of numerical data.
+  - It uses bars to show the frequency of data points within certain ranges.
+  
+- **Key Features**:
+  - **Bins**: Intervals that group data points.
+  - **Frequency**: The height of each bar represents the number of observations within that bin.
+
+---
+
+## Creating Histograms in R
+
+```r
+# Sample data
+set.seed(42)
+data &lt;- rnorm(100)
+
+# Basic histogram
+hist(data, main = "Histogram of Data", xlab = "Value", ylab = "Frequency", col = "skyblue", border = "white")
+```
+
+- **Task**: Create a histogram using your dataset. Experiment with the number of bins. How does changing the bin size affect the shape of the histogram?
+
+---
+
+## Density Plots
+
+### What is a Density Plot?
+
+- **Definition**
+   - A density plot is a smoothed version of a histogram.
+   - It shows the probability density function of the variable, giving a continuous estimation of the distribution.
+
+- **Key Features**
+   - Useful for visualizing the shape of the distribution.
+   - Can highlight the presence of multiple modes (peaks).
+
+---
+
+## Creating Density Plots in R
+
+###  Density plot
+```r
+plot(density(data), main = "Density Plot of Data", xlab = "Value", ylab = "Density", col = "blue")
+```
+
+- **Task**: Create a density plot using your dataset. How does the density plot compare to the histogram? What does it reveal about the data distribution?
+
+---
+
+## Boxplots
+
+###  What is a Boxplot?
+
+- **Definition**
+   - A boxplot is a standardized way of displaying the distribution of data based on a five-number summary: minimum, first   quartile (Q1), median, third quartile (Q3), and maximum.
+   - The "box" shows the interquartile range (IQR), with "whiskers" extending to the minimum and maximum values within 1.5 times the IQR.
+
+- **Key Features**
+  - Boxplots are particularly useful for identifying outliers and understanding the spread and skewness of the data.
+
+---
+
+## Boxplot
+```r
+boxplot(data, main = "Boxplot of Data", ylab = "Value", col = "lightgreen")
+```
+
+- **Task**: Create a boxplot using your dataset. Identify any outliers. How does the boxplot compare to the histogram and density plot?
+
+---
+
+## Identifying Outliers and Patterns
+
+### Detecting Outliers
+
+- **What is an Outlier?*:**
+   - An outlier is a data point that is significantly different from other observations.
+   - Outliers can indicate variability in the data, errors, or interesting phenomena.
+
+- **Methods for Detecting Outliers**
+   - *Boxplot Method*: Outliers are points outside 1.5 times the IQR.
+   - *Z-Score Method*: Data points with a Z-score greater than 2 or 3 may be considered outliers.
+   - *Visual Inspection*: Identify outliers through histograms, boxplots, and scatter plots.
+
+---
+## Identifying Outliers and Patterns
+
+### Analyzing Patterns in Data
+- **Pattern Identification*:**
+   - Look for clusters, trends, and gaps in your data.
+   - Visualizations such as scatter plots and line plots can reveal relationships between variables.
+
+- **EDA in Action*:**
+   - *Example*: Analyzing the relationship between temperature and species abundance.
+   - *Example*: Identifying seasonal trends in fish migration patterns.
+
+---
+
+## Visualizing Distributions with ggplot2
+
+- **Creating a Histogram in ggplot2**
+
+```r
+library(ggplot2)
+ggplot(data.frame(data), aes(x = data)) +
+  geom_histogram(binwidth = 0.5, fill = "skyblue", color = "white") +
+  labs(title = "Histogram of Data", x = "Value", y = "Frequency") +
+  theme_minimal()
+```
+
+- **Creating a Density Plot in ggplot2**
+
+```r
+ggplot(data.frame(data), aes(x = data)) +
+  geom_density(fill = "blue", alpha = 0.5) +
+  labs(title = "Density Plot of Data", x = "Value", y = "Density") +
+  theme_minimal()
+```
+
+- **Creating a Boxplot in ggplot2**
+
+```r
+ggplot(data.frame(data), aes(y = data)) +
+  geom_boxplot(fill = "lightgreen") +
+  labs(title = "Boxplot of Data", y = "Value") +
+  theme_minimal()
+```
+
+---
+
+## Summary and Next Steps
+
+### Key Takeaways
+
+- **Visualizing Distributions**
+   - Histograms, density plots, and boxplots are essential tools for understanding data distributions.
+
+- **Identifying Outliers**
+   - Outliers can provide valuable insights but may also indicate data issues.
+
+---
+
+## Next Steps
+
+- **Practice**
+  - Apply these techniques to your own datasets. Experiment with different visualizations to uncover hidden patterns.
+
+- **Preparation**
+  - Prepare for next week by revisiting your data and refining your visualizations.
+
+---
+
+# Thank You!
+
+## Questions?
+- Continue exploring your data using the techniques learned today. Next week, we'll dive into multivariate data visualization.
+
+--- 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current% / %total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
