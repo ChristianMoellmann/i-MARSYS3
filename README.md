@@ -39,7 +39,7 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Exercise:**
   - Creating simple plots (scatter plots, bar charts) using `ggplot2`.
 - **Reading:**
-  - [Exercise PDF](pdfs/exercise_week1.pdf)
+  - [visualisation zoo](pdfs/visualisation_zoo.pdf)
 
 ### Course Materials
 - [Lecture Slides: Principles of Effective Data Visualization](presentations/week2.html)
