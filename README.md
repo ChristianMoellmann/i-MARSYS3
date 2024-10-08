@@ -87,8 +87,8 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Scatter plot matrices, pairs plots, and heatmaps.
 - **Exercise:**
   - Creating scatter plot matrices and heatmaps using `ggplot2` and additional packages.
-- **Reading:**
-  - Friendly, M. (2002). *Corrgrams: Exploratory displays for correlation matrices*. https://otexts.com/fpp3/
+- **Video:**
+  - How to Create Correlation Plots in R. [https://otexts.com/fpp3/](https://www.youtube.com/watch?v=X12BoYpIjyw)
 
 ### Course Materials
 - [Lecture Slides: Working with Multivariate Data in Marine Ecology and Fisheries](presentations/week5.html)
