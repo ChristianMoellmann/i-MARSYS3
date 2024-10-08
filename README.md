@@ -78,6 +78,7 @@ Data visualization is an essential skill for interpreting and communicating comp
 ### Course Materials
 - [Lecture Slides: Exploratory Data Analysis (EDA) - Part 2](presentations/week4.html)
 - [Exercise PDF](pdfs/exercise_week4.pdf)
+
 ---
 
 ## Week 5: Working with Multivariate Data
