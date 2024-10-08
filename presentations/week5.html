@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Week 5: Working with Multivariate Data in Marine Ecology and Fisheries</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Christian Möllmann" />
+    <script src="libs/header-attrs-2.27/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Week 5: Working with Multivariate Data in Marine Ecology and Fisheries
+]
+.author[
+### Christian Möllmann
+]
+
+---
+
+
+## Working with Multivariate Data
+
+### Introduction to Multivariate Data in Marine Ecology and Fisheries
+
+- **Multivariate data**: Data involving more than two variables or features
+- **Relevance to marine ecology and fisheries**
+  - Marine ecosystems are complex, with interactions between physical, chemical, and biological factors.
+  - Multivariate data helps us understand the relationships between species, environmental variables, and human impacts.
+  
+- **Examples in marine ecology and fisheries**
+  - Examining the relationship between water temperature, salinity, and fish population distributions.
+  - Understanding how environmental variables (e.g., pH, dissolved oxygen, chlorophyll) influence species abundance and diversity.
+
+---
+
+### Importance of Multivariate Data
+
+- **Why is multivariate analysis important?**
+  - In marine ecology, the interactions between multiple variables often determine species survival, distribution, and behavior.
+  - Fisheries management often relies on understanding how multiple factors (e.g., fish size, age, location, and environmental conditions) interact to affect fish stocks.
+  
+- **Key Questions**
+  - How do environmental variables like temperature, pH, and nutrient availability affect fish populations?
+  - Can we identify patterns in species diversity that correlate with physical oceanographic features?
+
+---
+
+### Visualizing Relationships Between Variables
+
+- **Scatter Plot Matrices**
+  - Useful for visualizing relationships between multiple pairs of variables.
+  - Helps identify correlations, trends, and outliers across several variables in ecological and fisheries data.
+  
+```r
+### Example: Scatter Plot Matrix with `GGally` package
+install.packages("GGally")
+library(GGally)
+ggpairs(iris)
+  
+## Load libraries
+library(GGally)
+library(ggplot2)
+
+## Scatter plot matrix using the iris dataset
+ggpairs(iris, title = "Scatter Plot Matrix of Iris Dataset")
+```
+
+- **Task**: Run the code to create a scatter plot matrix for the iris dataset. What relationships between the variables can you observe?
+
+---
+
+## Pairs Plots
+
+### Pairs Plot Visualization
+
+- **Pairs plots:** Similar to scatter plot matrices but simpler
+- Can be used to plot the relationships between pairs of variables
+
+```r 
+ # Example: Pairs plot using base R
+pairs(iris[, 1:4], main = "Pairs Plot of Iris Dataset")
+```
+
+### Pairs Plot in Base R (iris dataset)
+
+```r 
+pairs(iris[, 1:4], col = iris$Species, main = "Pairs Plot of Iris Dataset")
+``` 
+- **Task**: Run the code to generate the pairs plot for the iris dataset. What patterns can you identify?
+ 
+---
+  
+## Heatmaps and Correlation Matrices
+
+### Introduction to Heatmaps and Correlation Matrices
+
+- **Heatmaps:** Useful for visualizing the correlation between variables in a matrix format
+- **Correlation Matrices:**
+	  - A table showing correlation coefficients between variables
+	  - Useful in marine ecology to understand how environmental and biological variables are related
+
+```r 
+# Example: Heatmap using the `heatmap` function in R
+heatmap(cor(mtcars), main = "Heatmap of Correlations in MTCars Dataset")
+```
+---
+  
+## Heatmaps and Correlation Matrices
+
+### Creating a Heatmap in R
+
+```r 
+# Creating a correlation matrix heatmap using the mtcars dataset
+data(mtcars)
+heatmap(cor(mtcars), main = "Heatmap of Correlations in MTCars Dataset", col = heat.colors(256))
+```
+
+- **Task**: Run the code to create a heatmap for the mtcars dataset. What correlations stand out?
+---
+
+## Visualizing Correlation Matrices with corrplot
+
+### Introduction to corrplot
+
+- **corrplot package:**
+	  - A powerful tool for visualizing correlation matrices using more sophisticated graphics than base R heatmaps
+	  - Particularly useful for large datasets with many variables in marine ecology, where visualizing correlations helps uncover meaningful relationships
+
+---
+
+###Creating Correlation Plots with corrplot
+
+```r 
+# Installing and loading the corrplot package
+install.packages("corrplot")
+library(corrplot)
+
+# Creating a correlation matrix plot for the mtcars dataset
+cor_matrix &lt;- cor(mtcars)
+corrplot(cor_matrix, method = "circle", tl.cex = 0.8, main = "Correlation Plot of MTCars Dataset")
+```
+- **Task**: Run the code to generate a correlation plot for the mtcars dataset. How do the visualizations help in identifying strong correlations or negative relationships between variables?
+
+---
+
+## Summary and Key Takeaways
+
+### Summary
+
+- Multivariate data analysis is essential in marine ecology and fisheries due to the complexity of ecosystems and interactions between multiple variables
+- Visualizations like scatter plot matrices, pairs plots, heatmaps, and correlation plots are valuable tools for exploring these relationships
+
+## Thank You!
+
+### Questions?
+
+- Use the visualization techniques learned today on your own marine ecology or fisheries datasets. Next week, we’ll continue with time series data visualization
+
+
+
+
+
+
+
+  
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current% / %total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
