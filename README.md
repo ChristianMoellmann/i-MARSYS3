@@ -90,6 +90,12 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Reading:**
   - Friendly, M. (2002). *Corrgrams: Exploratory displays for correlation matrices*. https://otexts.com/fpp3/
 
+### Course Materials
+- [Lecture Slides: Working with Multivariate Data in Marine Ecology and Fisheries](presentations/week5.html)
+- [Exercise PDF](pdfs/exercise_week5.pdf)
+
+
+
 ---
 
 ## Week 6: Time Series Data Visualization
