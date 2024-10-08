@@ -22,9 +22,10 @@ Data visualization is an essential skill for interpreting and communicating comp
   - [data visualisation](https://rkabacoff.github.io/datavis/)
   - [data science](https://r4ds.had.co.nz/index.html)
 
-- **Video:**
+- **Videos:**
   - [The beauty of data visualization - David McCandless](https://www.youtube.com/watch?v=5Zg-C8AAIGg)
-
+  - [Visualize your data using ggplot](https://www.youtube.com/watch?v=rfR9Nrpfnyg)
+    
 ### Course Materials
 - [Lecture Slides: Introduction to Data Visualization](presentations/week1.html)
 - [Exercise PDF](pdfs/exercise_week1.pdf)
