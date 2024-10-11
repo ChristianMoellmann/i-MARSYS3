@@ -92,10 +92,8 @@ Data visualization is an essential skill for interpreting and communicating comp
   - How to Create Correlation Plots in R. [https://otexts.com/fpp3/](https://www.youtube.com/watch?v=X12BoYpIjyw)
 
 ### Course Materials
-- [Lecture Slides: Working with Multivariate Data in Marine Ecology and Fisheries](presentations/week5.html)
+- [Lecture Slides: Working with Multivariate Data](presentations/week5.html)
 - [Exercise PDF](pdfs/exercise_week5.pdf)
-
-
 
 ---
 
@@ -107,6 +105,11 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Creating time series visualizations with `ggplot2`.
 - **Reading:**
   - Hyndman, R.J., & Athanasopoulos, G. (2018). *Forecasting: Principles and Practice*. Chapter on time series visualization.
+
+### Course Materials
+- [Lecture Slides: Working with Time Series Data](presentations/week6.html)
+- [Exercise PDF](pdfs/exercise_week6.pdf)
+
 
 ---
 
