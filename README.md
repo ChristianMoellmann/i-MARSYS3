@@ -14,8 +14,7 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Importance of data visualization in marine ecology and fisheries science.
   - Overview of the course structure and objectives.
   - Introduction to R and RStudio.
-- **Exercise:**
-  - Basic R syntax, data types, and importing datasets.
+
 - **Reading:**
   - [ggplot2](https://ggplot2-book.org)
   - [tidyR](https://bookdown.org/ansellbr/WEHI_tidyR_course_book/)
@@ -37,8 +36,7 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Understanding the audience and purpose of visualizations.
   - Visual perception and design principles.
   - Introduction to `ggplot2` and the Grammar of Graphics.
-- **Exercise:**
-  - Creating simple plots (scatter plots, bar charts) using `ggplot2`.
+
 - **Reading:**
   - [visualisation zoo](pdfs/visualisation_zoo.pdf)
 
@@ -54,8 +52,7 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Introduction to EDA and its importance in ecological research.
   - Descriptive statistics and summary functions in R.
   - Data cleaning and preparation.
-- **Exercise:**
-  - Data exploration using basic EDA techniques.
+
 - **Reading:**
   - [*Exploratory Data Analysis*](https://bookdown.org/rdpeng/exdata/)
  
@@ -70,12 +67,10 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Visualizing distributions: histograms, density plots, and boxplots.
   - Identifying outliers and patterns.
   - Combining EDA with `ggplot2`.
-- **Exercise:**
-  - Creating and interpreting histograms, boxplots, and density plots in `ggplot2`.
+
 - **Reading:**
   - Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis*. Chapter on EDA.
 
- 
 ### Course Materials
 - [Lecture Slides: Exploratory Data Analysis (EDA) - Part 2](presentations/week4.html)
 - [Exercise PDF](pdfs/exercise_week4.pdf)
@@ -86,10 +81,9 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Topics Covered:**
   - Visualizing relationships between multiple variables.
   - Scatter plot matrices, pairs plots, and heatmaps.
-- **Exercise:**
-  - Creating scatter plot matrices and heatmaps using `ggplot2` and additional packages.
+
 - **Video:**
-  - How to Create Correlation Plots in R. [https://otexts.com/fpp3/](https://www.youtube.com/watch?v=X12BoYpIjyw)
+  - How to Create Correlation Plots in R. [https://otexts.com/fpp3/]
 
 ### Course Materials
 - [Lecture Slides: Working with Multivariate Data](presentations/week5.html)
@@ -101,15 +95,12 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Topics Covered:**
   - Fundamentals of time series data.
   - Line plots, area charts, and other techniques for visualizing temporal trends.
-- **Exercise:**
-  - Creating time series visualizations with `ggplot2`.
+
 - **Reading:**
   [Hyndman, R.J., & Athanasopoulos, G. (2018). *Forecasting: Principles and Practice*. Chapter on time series graphics](https://otexts.com/fpp2/)
 - **Video:**
   - What is Time Series Analysis? [https://www.youtube.com/watch?v=GE3JOFwTWVM]
 
-
- 
 ### Course Materials
 - [Lecture Slides: Working with Time Series Data](presentations/week6.html)
 - [Exercise PDF](pdfs/exercise_week6.pdf)
