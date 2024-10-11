@@ -104,6 +104,7 @@ Data visualization is an essential skill for interpreting and communicating comp
 - **Exercise:**
   - Creating time series visualizations with `ggplot2`.
 - **Reading:**
+  [Hyndman, R.J., & Athanasopoulos, G. (2018). *Forecasting: Principles and Practice*. Chapter on time series graphics](https://otexts.com/fpp2/)
   - Hyndman, R.J., & Athanasopoulos, G. (2018). *Forecasting: Principles and Practice*. Chapter on time series visualization.
 
 ### Course Materials
