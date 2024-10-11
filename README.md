@@ -83,7 +83,7 @@ Data visualization is an essential skill for interpreting and communicating comp
   - Scatter plot matrices, pairs plots, and heatmaps.
 
 - **Video:**
-  - How to Create Correlation Plots in R. [https://otexts.com/fpp3/]
+  - How to Create Correlation Plots in R.[https://otexts.com/fpp3/]
 
 ### Course Materials
 - [Lecture Slides: Working with Multivariate Data](presentations/week5.html)
@@ -98,13 +98,13 @@ Data visualization is an essential skill for interpreting and communicating comp
 
 - **Reading:**
   [Hyndman, R.J., & Athanasopoulos, G. (2018). *Forecasting: Principles and Practice*. Chapter on time series graphics](https://otexts.com/fpp2/)
+
 - **Video:**
-  - What is Time Series Analysis? [https://www.youtube.com/watch?v=GE3JOFwTWVM]
+  - What is Time Series Analysis?[https://www.youtube.com/watch?v=GE3JOFwTWVM]
 
 ### Course Materials
 - [Lecture Slides: Working with Time Series Data](presentations/week6.html)
 - [Exercise PDF](pdfs/exercise_week6.pdf)
-
 
 ---
 
